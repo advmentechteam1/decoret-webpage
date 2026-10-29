@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Event Booking | Amyra's Party Decor</title>
+    <meta name="description" content="Inquire about event availability, get a customized moodboard and transparent quotation for your birthday, wedding, or celebration decor.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOP ANNOUNCEMENT TICKER -->
+    <div class="top-announcement">
+        <div class="marquee-track">
+            <span><i class="fa-solid fa-sparkles"></i> 100% Real Event Setups</span>
+            <span><i class="fa-solid fa-heart"></i> Organic Custom Balloon Garlands</span>
+            <span><i class="fa-solid fa-wand-magic-sparkles"></i> Fresh & Silk Luxury Floral Backdrops</span>
+            <span><i class="fa-solid fa-bolt"></i> Same-Day & Midnight Surprise Setups</span>
+            <span><i class="fa-solid fa-star"></i> Rated 4.9/5 by 850+ Real Families</span>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="luxe-header" id="header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand-brand">
+                <span class="brand-monogram">A</span>
+                <div class="brand-names">
+                    <span class="name-main">Amyra's</span>
+                    <span class="name-sub">Party Decor</span>
+                </div>
+            </a>
+
+            <nav class="luxe-nav" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <div class="mobile-cta-box">
+                    <a href="contact.html" class="btn btn-primary w-100">Book an Event</a>
+                </div>
+            </nav>
+
+            <div class="header-right">
+                <a href="contact.html" class="btn btn-primary d-mobile-none">Book an Event</a>
+                <button class="nav-burger" id="menuToggle" aria-label="Open Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HERO BANNER -->
+    <section class="page-banner">
+        <div class="container">
+            <div class="tag-label">Plan Your Celebration</div>
+            <h1>Contact & Event Booking</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>Contact</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING SPLIT SECTION -->
+    <section class="booking-luxe">
+        <div class="container booking-split">
+            
+            <!-- Left Info & Benefits Column -->
+            <div class="booking-details">
+                <div class="tag-label">Online Inquiries</div>
+                <h2 class="h2-heading">Let's Design Your Dream Event Together</h2>
+                <p class="body-p">
+                    Send us your event date, preferred celebration style, and decor ideas. Our lead styling coordinator will review your request and get back to you with custom moodboard suggestions and quotation options.
+                </p>
+
+                <div class="perks-list">
+                    <div class="perk-card">
+                        <div class="perk-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <div>
+                            <h6>Free Theme Consultation</h6>
+                            <p>Share your favorite colors or characters and receive tailored setup ideas.</p>
+                        </div>
+                    </div>
+                    <div class="perk-card">
+                        <div class="perk-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                        <div>
+                            <h6>Fast Slot Confirmation</h6>
+                            <p>We check decorator schedules immediately and lock in your celebration date.</p>
+                        </div>
+                    </div>
+                    <div class="perk-card">
+                        <div class="perk-icon"><i class="fa-solid fa-tags"></i></div>
+                        <div>
+                            <h6>Transparent Fixed Pricing</h6>
+                            <p>All props, lighting, frames, setup, and cleanup included in one simple price.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wa-banner" style="background: var(--primary-soft); border-color: var(--border-soft);">
+                    <div class="wa-bubble" style="background: var(--primary);"><i class="fa-solid fa-comments"></i></div>
+                    <div>
+                        <h5 style="color: var(--primary);">Instant Inquiry Service</h5>
+                        <p style="color: var(--text-body);">Fill the form on the right and submit your request. Our stylists review all inquiries within 2 hours.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Card Form -->
+            <div class="booking-card">
+                <div class="form-badge">Fast Response</div>
+                <h3>Get a Customized Event Quote</h3>
+                <p>Fill out the details below and we will prepare a moodboard & price breakdown for you.</p>
+
+                <form id="bookingForm" class="styled-form">
+                    <div class="input-grid">
+                        <div class="input-field">
+                            <label for="fullName">Your Full Name *</label>
+                            <input type="text" id="fullName" placeholder="e.g. Aditi Sharma" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="phone">Your Contact Number / WhatsApp *</label>
+                            <input type="tel" id="phone" placeholder="e.g. 9876543210" required>
+                        </div>
+                    </div>
+
+                    <div class="input-grid">
+                        <div class="input-field">
+                            <label for="eventType">Occasion / Event Type *</label>
+                            <select id="eventType" required>
+                                <option value="" disabled selected>Select Occasion</option>
+                                <option value="Kids Birthday">Kids 1st / Milestone Birthday</option>
+                                <option value="Adult Birthday">Adult Birthday Party</option>
+                                <option value="Baby Shower">Baby Shower / Welcome Baby</option>
+                                <option value="Wedding / Engagement">Wedding / Engagement / Haldi</option>
+                                <option value="Anniversary">Anniversary / Romantic Setup</option>
+                                <option value="Corporate Event">Corporate / Store Opening</option>
+                                <option value="Other">Other Custom Event</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label for="eventDate">Target Event Date *</label>
+                            <input type="date" id="eventDate" required>
+                        </div>
+                    </div>
+
+                    <div class="input-grid">
+                        <div class="input-field">
+                            <label for="preferredPackage">Preferred Package (Optional)</label>
+                            <input type="text" id="preferredPackage" placeholder="e.g. Signature Luxe or Custom Quote">
+                        </div>
+                        <div class="input-field">
+                            <label for="eventLocation">Locality / City Area</label>
+                            <input type="text" id="eventLocation" placeholder="e.g. South Delhi, Gurgaon, Noida...">
+                        </div>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="notes">Theme Ideas, Color Palette & Special Wishes</label>
+                        <textarea id="notes" rows="3" placeholder="Tell us your theme colors (e.g. blush pink & lilac), preferred props, favorite characters, or venue dimensions..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fa-solid fa-paper-plane"></i> Submit Inquiry & Request Moodboard
+                    </button>
+                    <div class="status-msg" id="formStatus"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT HAPPENS NEXT TIMELINE -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-title-wrap text-center">
+                <div class="tag-label">The Booking Journey</div>
+                <h2 class="h2-heading">What Happens After You Inquire</h2>
+                <p class="body-p">Here is our simple 3-step process to transform your venue into an enchanting celebration.</p>
+            </div>
+
+            <div class="timeline-deck">
+                <div class="timeline-card">
+                    <div class="timeline-step-num">01</div>
+                    <h4>Inquiry & Date Lock</h4>
+                    <p>Within 2 hours of receiving your form, our lead coordinator verifies our decorator schedule, confirms date availability, and contacts you with initial quotation ranges.</p>
+                </div>
+
+                <div class="timeline-card">
+                    <div class="timeline-step-num">02</div>
+                    <h4>Digital Moodboard & Palette</h4>
+                    <p>We craft a personalized visual moodboard with exact balloon shades, backdrop frame geometries, floral arrangements, and prop options matching your venue space.</p>
+                </div>
+
+                <div class="timeline-card">
+                    <div class="timeline-step-num">03</div>
+                    <h4>Master Setup on Event Day</h4>
+                    <p>Our professional crew arrives 2 to 3 hours before party time with all pre-inflated organic clusters, frames, and lighting. Everything is ready before your first guest arrives!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRE-BOOKING PREPARATION CHECKLIST -->
+    <section class="services-luxe" style="background: #FFFFFF;">
+        <div class="container">
+            <div class="section-title-wrap text-center">
+                <div class="tag-label">Helpful Tips</div>
+                <h2 class="h2-heading">Pre-Booking Preparation Checklist</h2>
+                <p class="body-p">A few quick details that help us design the perfect decor setup for your space.</p>
+            </div>
+
+            <div class="prep-grid">
+                <div class="prep-item">
+                    <div class="prep-icon"><i class="fa-solid fa-ruler-combined"></i></div>
+                    <h5>Space Dimensions</h5>
+                    <p>Check the available wall width and ceiling clearance. Our standard circular rings measure 7 ft in height and need 8-10 ft width.</p>
+                </div>
+
+                <div class="prep-item">
+                    <div class="prep-icon"><i class="fa-solid fa-plug"></i></div>
+                    <h5>Power Outlet Access</h5>
+                    <p>If your package includes LED neon signs, fairy lights, or marquee numbers, ensure an electrical socket is available within 10-15 meters.</p>
+                </div>
+
+                <div class="prep-item">
+                    <div class="prep-icon"><i class="fa-solid fa-palette"></i></div>
+                    <h5>Theme & Color Inspo</h5>
+                    <p>Have 2-3 favorite color shades or an invitation card picture ready so we can match balloon and floral palettes seamlessly.</p>
+                </div>
+
+                <div class="prep-item">
+                    <div class="prep-icon"><i class="fa-solid fa-clock"></i></div>
+                    <h5>Venue Access Window</h5>
+                    <p>Confirm that your venue or apartment gives our team at least 2 to 3 hours of quiet setup access prior to guest arrival.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VENUES & SPACES WE DECORATE -->
+    <section class="faq-section" style="background: var(--bg-page);">
+        <div class="container">
+            <div class="section-title-wrap text-center">
+                <div class="tag-label">Versatile Installations</div>
+                <h2 class="h2-heading">Spaces & Venues We Transform</h2>
+                <p class="body-p">Our free-standing structures and damage-free mounts work smoothly in any environment.</p>
+            </div>
+
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-icon"><i class="fa-solid fa-house"></i></div>
+                    <h5>Private Homes & Living Rooms</h5>
+                    <p>Compact organic arches and shimmer walls designed specifically for apartment living rooms without damaging paint or wallpaper.</p>
+                </div>
+
+                <div class="trust-item">
+                    <div class="trust-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+                    <h5>Rooftops & Garden Lawns</h5>
+                    <p>Weighted outdoor metal structures, romantic fairy light teepees, and wind-resistant balloon garlands built for open-air celebrations.</p>
+                </div>
+
+                <div class="trust-item">
+                    <div class="trust-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+                    <h5>Banquet Halls & Ballrooms</h5>
+                    <p>Expansive stage decor, 15-foot balloon tunnels, cake table pedestals, and luxury floral rings suited for large gatherings.</p>
+                </div>
+
+                <div class="trust-item">
+                    <div class="trust-icon"><i class="fa-solid fa-mug-saucer"></i></div>
+                    <h5>Restaurants & Cafes</h5>
+                    <p>Intimate corner photobooths, bridal shower floral backdrops, and table styling that elevate private dining rooms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING FAQ ACCORDION -->
+    <section class="faq-section" style="background: #FFFFFF;">
+        <div class="faq-container">
+            <div class="section-title-wrap text-center">
+                <div class="tag-label">Booking Questions</div>
+                <h2 class="h2-heading">Frequently Asked Questions</h2>
+                <p class="body-p">Everything you need to know about reserving your celebration date with Amyra's.</p>
+            </div>
+
+            <div class="faq-accordion">
+                <div class="faq-item active">
+                    <button class="faq-header">
+                        <span>How far in advance should I reserve my event date?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-body" style="display: block;">
+                        <p>We recommend reserving 5 to 10 days in advance, especially for weekend slots (Friday through Sunday) which book up quickly. However, we also accommodate express same-day and midnight surprise bookings subject to stylist availability.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-header">
+                        <span>Can I customize the balloon colors and theme elements?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-body">
+                        <p>Yes, 100%! Every package can be customized to match your exact color preferences, favorite characters, personalized acrylic name boards, and lighting elements. We share a color moodboard before finalizing.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-header">
+                        <span>What is your postponement or rescheduling policy?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-body">
+                        <p>If your event needs to be moved due to weather, family emergency, or venue changes, we allow free date rescheduling up to 48 hours prior to your booked slot, subject to our availability calendar.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-header">
+                        <span>Who takes care of dismantling the decor after the party?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-body">
+                        <p>For rental props such as metal arch frames, neon signs, LED marquee numbers, and cake pedestals, our team coordinates a convenient pickup time that evening or the following morning, ensuring your venue is left clean and tidy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-luxe">
+        <div class="container footer-grid">
+            <div class="col-main">
+                <div class="brand-brand">
+                    <span class="brand-monogram">A</span>
+                    <div class="brand-names">
+                        <span class="name-main">Amyra's</span>
+                        <span class="name-sub">Party Decor</span>
+                    </div>
+                </div>
+                <p class="footer-blurb">
+                    Delivering authentic, memorable celebrations with luxury balloon installations and bespoke backdrops across Delhi NCR.
+                </p>
+                <div class="social-pills">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+
+            <div class="col-links">
+                <h5>Navigation</h5>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="services.html">Specialty Services</a></li>
+                    <li><a href="packages.html">Curated Packages</a></li>
+                    <li><a href="gallery.html">Real Photos</a></li>
+                    <li><a href="reviews.html">Client Reviews</a></li>
+                    <li><a href="contact.html">Contact & Booking</a></li>
+                </ul>
+            </div>
+
+            <div class="col-links">
+                <h5>Our Themes</h5>
+                <ul>
+                    <li><a href="services.html">Pastel Safari & Woodland</a></li>
+                    <li><a href="services.html">Blush Pink & Chrome Arches</a></li>
+                    <li><a href="services.html">Fairytale Princess & Castles</a></li>
+                    <li><a href="services.html">Cloud 9 Baby Showers</a></li>
+                    <li><a href="services.html">Cabana & Romantic Dates</a></li>
+                    <li><a href="services.html">LED Marquee Numbers</a></li>
+                </ul>
+            </div>
+
+            <div class="col-links">
+                <h5>Why Choose Us</h5>
+                <ul class="perks-bullets">
+                    <li><i class="fa-solid fa-circle-check"></i> 100% Real Event Work</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Dedicated Stylist Consultation</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Stress-Free On-Time Setup</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Clean Venue Pack-Down</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-base">
+            <div class="container footer-base-inner">
+                <p>&copy; <span id="currentYear"></span> Amyra's Party Decor. All rights reserved.</p>
+                <p>Designed for memorable celebrations with <i class="fa-solid fa-heart" style="color: #E57399;"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TOP -->
+    <button class="luxe-scroll-top" id="scrollTopBtn" aria-label="Scroll to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
