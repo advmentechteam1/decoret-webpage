@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- BACKDROP OVERLAY FOR MOBILE DRAWER -->
+    <div class="nav-overlay" id="navOverlay"></div>
 
     <!-- TOP ANNOUNCEMENT TICKER -->
     <div class="top-announcement">
@@ -34,34 +36,37 @@
     <header class="luxe-header" id="header">
         <div class="container header-inner">
             <a href="index.html" class="brand-brand">
-                <span class="brand-monogram">A</span>
-                <div class="brand-names">
-                    <span class="name-main">Amyra's</span>
-                    <span class="name-sub">Party Decor</span>
-                </div>
+                <img src="logo.png" alt="Amayra Store Logo" class="brand-main-logo">
             </a>
 
-            <nav class="luxe-nav" id="navMenu">
+                        <nav class="luxe-nav" id="navMenu">
+                <div class="drawer-header">
+                    <div class="brand-brand">
+                        <img src="logo.png" alt="Amayra Store Logo" class="brand-main-logo">
+                    </div>
+                    <button class="drawer-close" id="drawerClose" aria-label="Close Menu">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
                 <ul class="nav-list">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="packages.html">Packages</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="reviews.html">Reviews</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-heart"></i> About</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-wand-magic-sparkles"></i> Services</a></li>
+                    <li><a href="packages.html"><i class="fa-solid fa-tags"></i> Packages</a></li>
+                    <li><a href="gallery.html"><i class="fa-solid fa-images"></i> Gallery</a></li>
+                    <li><a href="reviews.html"><i class="fa-solid fa-star"></i> Reviews</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-calendar-check"></i> Contact</a></li>
                 </ul>
                 <div class="mobile-cta-box">
-                    <a href="contact.html" class="btn btn-primary w-100">Book an Event</a>
+                    <a href="contact.html" class="btn btn-primary w-100"><i class="fa-solid fa-paper-plane"></i> Book an Event</a>
                 </div>
             </nav>
 
             <div class="header-right">
                 <a href="contact.html" class="btn btn-primary d-mobile-none">Book an Event</a>
                 <button class="nav-burger" id="menuToggle" aria-label="Open Navigation Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <i class="fa-solid fa-bars"></i>
+                    <span>Menu</span>
                 </button>
             </div>
         </div>
@@ -229,7 +234,7 @@
                         </div>
                         <p>Thematic setups for 1st birthdays, teenage milestones, and grand 25th/50th celebrations with custom backdrops and cake tables.</p>
                         <div class="box-footer">
-                            <span class="price-start">From ₹2,999</span>
+                            <span class="price-start">From ?2,999</span>
                             <a href="services.html" class="arrow-btn" aria-label="View Details"><i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -247,7 +252,7 @@
                         </div>
                         <p>Luxury floral arches, ring ceremony backdrops, haldi/mehendi photo booths, and welcoming entrance walkways.</p>
                         <div class="box-footer">
-                            <span class="price-start">From ₹8,999</span>
+                            <span class="price-start">From ?8,999</span>
                             <a href="services.html" class="arrow-btn" aria-label="View Details"><i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -265,7 +270,7 @@
                         </div>
                         <p>Gentle pastel balloon clouds, gender reveal boxes, teddy bears, cradle dressing, and customized mommy-to-be backdrops.</p>
                         <div class="box-footer">
-                            <span class="price-start">From ₹4,499</span>
+                            <span class="price-start">From ?4,499</span>
                             <a href="services.html" class="arrow-btn" aria-label="View Details"><i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -278,89 +283,217 @@
         </div>
     </section>
 
-    <!-- POPULAR PACKAGES PREVIEW -->
-    <section class="packages-luxe">
+        <!-- TRENDING THEMES LOOKBOOK -->
+    <section class="themes-section">
         <div class="container">
             <div class="section-title-wrap text-center">
-                <div class="tag-label">Value Bundles</div>
-                <h2 class="h2-heading">Curated Celebration Packages</h2>
-                <p class="body-p">Clear, upfront rates with no hidden costs. Select a bundle or customize it to your venue.</p>
+                <div class="tag-label">Lookbook 2026</div>
+                <h2 class="h2-heading">Trending Celebration Concepts</h2>
+                <p class="body-p">Bespoke thematic styling engineered for milestone birthdays, romantic proposals, and grand anniversaries.</p>
             </div>
 
-            <div class="pricing-deck">
-                <div class="tier-card">
-                    <div class="tier-top">
-                        <span class="tier-badge">Essential</span>
-                        <h3 class="tier-title">Silver Bliss</h3>
-                        <p class="tier-desc">Ideal for bedrooms, living rooms & intimate celebrations</p>
-                        <div class="tier-price-box">
-                            <span class="curr">₹</span>
-                            <span class="val">2,999</span>
-                            <span class="per">/ complete setup</span>
-                        </div>
+            <div class="themes-grid">
+                <div class="theme-card">
+                    <div class="theme-thumb">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop&q=80" alt="Boho Cabana & Pampas Celebration Setup" loading="lazy">
+                        <span class="theme-badge">Most Requested</span>
                     </div>
-                    <div class="tier-body">
-                        <ul class="tier-features">
-                            <li><i class="fa-solid fa-circle-check"></i> 100+ Metallic / Pastel Balloons</li>
-                            <li><i class="fa-solid fa-circle-check"></i> 2 Foil Shimmer Curtains Backdrop</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Happy Birthday / Anniversary Foil Banner</li>
-                            <li><i class="fa-solid fa-circle-check"></i> 4 Star or Heart Foil Balloons</li>
-                            <li class="muted-feat"><i class="fa-solid fa-minus"></i> Metal Ring Arch & Neon Light</li>
-                        </ul>
-                        <a href="contact.html?package=Silver%20Bliss" class="btn btn-outline w-100">Select Silver</a>
+                    <div class="theme-info">
+                        <h4>Boho Pampas Cabana</h4>
+                        <p>Earthy terracotta & blush double-stuffed balloons paired with dried pampas plumes and ambient floor lanterns.</p>
+                        <div class="theme-specs">
+                            <span><i class="fa-solid fa-clock"></i> 2-Hour Setup</span>
+                            <span><i class="fa-solid fa-sparkles"></i> Fairy Glow</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="tier-card featured-tier">
-                    <div class="ribbon-popular">POPULAR CHOICE</div>
-                    <div class="tier-top">
-                        <span class="tier-badge">Most Loved</span>
-                        <h3 class="tier-title">Blush Elegance</h3>
-                        <p class="tier-desc">Show-stopper setup for banquet halls, living rooms & lawns</p>
-                        <div class="tier-price-box">
-                            <span class="curr">₹</span>
-                            <span class="val">6,499</span>
-                            <span class="per">/ complete setup</span>
-                        </div>
+                <div class="theme-card">
+                    <div class="theme-thumb">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&auto=format&fit=crop&q=80" alt="Midnight Shimmer & Neon Glam" loading="lazy">
+                        <span class="theme-badge">VIP Glam</span>
                     </div>
-                    <div class="tier-body">
-                        <ul class="tier-features">
-                            <li><i class="fa-solid fa-circle-check"></i> 6.5 ft Metal Ring Arch Structure</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Organic Multi-size Balloon Garland (250+ balloons)</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Warm White Neon Sign ("Happy Birthday" / "Better Together")</li>
-                            <li><i class="fa-solid fa-circle-check"></i> 2 Designer Cylindrical Cake Pedestals</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Artificial Floral & Foliage Vines</li>
-                        </ul>
-                        <a href="contact.html?package=Blush%20Elegance" class="btn btn-primary w-100">Select Blush Elegance</a>
+                    <div class="theme-info">
+                        <h4>Midnight Shimmer & Neon</h4>
+                        <p>High-gloss chrome balloons, reflective sequin shimmer wall, and custom glowing neon signs for evening dance parties.</p>
+                        <div class="theme-specs">
+                            <span><i class="fa-solid fa-bolt"></i> Neon Power</span>
+                            <span><i class="fa-solid fa-gem"></i> Chrome Finish</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="tier-card">
-                    <div class="tier-top">
-                        <span class="tier-badge">VIP Luxury</span>
-                        <h3 class="tier-title">Royal Platinum</h3>
-                        <p class="tier-desc">Complete venue transformation with 3D props & entrance arch</p>
-                        <div class="tier-price-box">
-                            <span class="curr">₹</span>
-                            <span class="val">12,999</span>
-                            <span class="per">/ complete setup</span>
+                <div class="theme-card">
+                    <div class="theme-thumb">
+                        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&auto=format&fit=crop&q=80" alt="Pastel Safari Wonderland" loading="lazy">
+                        <span class="theme-badge">Kids Favorite</span>
+                    </div>
+                    <div class="theme-info">
+                        <h4>Pastel Safari Wonderland</h4>
+                        <p>Matte sage, peach, and vanilla organic arch accented with hand-painted wooden wildlife cutouts and balloon trees.</p>
+                        <div class="theme-specs">
+                            <span><i class="fa-solid fa-wand-magic-sparkles"></i> 3D Props</span>
+                            <span><i class="fa-solid fa-heart"></i> Child-Safe</span>
                         </div>
                     </div>
-                    <div class="tier-body">
-                        <ul class="tier-features">
-                            <li><i class="fa-solid fa-circle-check"></i> Double Arch / Custom Wooden Panel Backdrop</li>
-                            <li><i class="fa-solid fa-circle-check"></i> 500+ Balloon Grand Organic Garland</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Premium Custom Neon Sign (Rental Included)</li>
-                            <li><i class="fa-solid fa-circle-check"></i> 3 Cylindrical Plinths + Dessert Cart</li>
-                            <li><i class="fa-solid fa-circle-check"></i> 3D Themed Life-size Character Props</li>
-                        </ul>
-                        <a href="contact.html?package=Royal%20Platinum" class="btn btn-outline w-100">Select Platinum</a>
+                </div>
+
+                <div class="theme-card">
+                    <div class="theme-thumb">
+                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&auto=format&fit=crop&q=80" alt="Royal Floral Hoop Arch" loading="lazy">
+                        <span class="theme-badge">Timeless Luxe</span>
+                    </div>
+                    <div class="theme-info">
+                        <h4>Royal Floral Hoop Arch</h4>
+                        <p>7-foot freestanding golden ring wrapped in cascading imported silk hydrangeas, blush roses, and organic orbs.</p>
+                        <div class="theme-specs">
+                            <span><i class="fa-solid fa-ring"></i> Golden Hoop</span>
+                            <span><i class="fa-solid fa-leaf"></i> Silk Florals</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="text-center" style="margin-top: 40px;">
-                <a href="packages.html" class="btn btn-soft btn-xl">Compare All Package Inclusions <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="gallery.html" class="btn btn-outline btn-xl">Explore Complete Photo Gallery <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE PROPS & RENTAL SHOWCASE -->
+    <section class="props-deck-section">
+        <div class="container">
+            <div class="section-title-wrap text-center">
+                <div class="tag-label">Signature Elements</div>
+                <h2 class="h2-heading">Custom Props & Lighting Elements</h2>
+                <p class="body-p">Every installation is crafted with commercial-grade backdrops, studio neon lighting, and double-layered balloons.</p>
+            </div>
+
+            <div class="props-deck-grid">
+                <div class="prop-card">
+                    <div class="prop-media">
+                        <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&auto=format&fit=crop&q=80" alt="Custom Neon Signages" loading="lazy">
+                        <span class="prop-pill"><i class="fa-solid fa-bolt"></i> Studio Neon</span>
+                    </div>
+                    <div class="prop-body">
+                        <h4>Custom Neon Signages</h4>
+                        <p>Warm white and vibrant colored flex neons available in popular phrases like "Happy Birthday", "Better Together", and custom names.</p>
+                        <div class="prop-tags">
+                            <span class="prop-tag">Warm White</span>
+                            <span class="prop-tag">Dimmable</span>
+                            <span class="prop-tag">Custom Text</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-media">
+                        <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=800&auto=format&fit=crop&q=80" alt="4-Foot LED Marquee Numbers" loading="lazy">
+                        <span class="prop-pill"><i class="fa-solid fa-lightbulb"></i> 4ft Marquee</span>
+                    </div>
+                    <div class="prop-body">
+                        <h4>4-Foot Illuminated Numbers</h4>
+                        <p>Giant freestanding wooden marquee numbers and letters with warm vintage bulb glow, perfect for milestone birthdays and anniversaries.</p>
+                        <div class="prop-tags">
+                            <span class="prop-tag">Ages 1 to 100</span>
+                            <span class="prop-tag">Freestanding</span>
+                            <span class="prop-tag">Photo Magnet</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-media">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&auto=format&fit=crop&q=80" alt="Fluted & Mirrored Plinths" loading="lazy">
+                        <span class="prop-pill"><i class="fa-solid fa-shapes"></i> Cake Plinths</span>
+                    </div>
+                    <div class="prop-body">
+                        <h4>Fluted Cake Pedestals</h4>
+                        <p>Trio of staggered cylindrical plinths in ribbed pastel and mirror finishes to showcase custom birthday cakes and dessert displays.</p>
+                        <div class="prop-tags">
+                            <span class="prop-tag">Set of 3</span>
+                            <span class="prop-tag">Heavy Duty</span>
+                            <span class="prop-tag">Cake Ready</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-media">
+                        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&auto=format&fit=crop&q=80" alt="Dynamic Shimmer Sequin Wall" loading="lazy">
+                        <span class="prop-pill"><i class="fa-solid fa-gem"></i> Shimmer Wall</span>
+                    </div>
+                    <div class="prop-body">
+                        <h4>Dynamic Shimmer Walls</h4>
+                        <p>Air-activated reflective square sequin panels that create mesmerizing sparkle and motion for unforgettable selfies.</p>
+                        <div class="prop-tags">
+                            <span class="prop-tag">Champagne</span>
+                            <span class="prop-tag">Silver</span>
+                            <span class="prop-tag">Holographic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-media">
+                        <img src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=800&auto=format&fit=crop&q=80" alt="Double-Stuffed Matte Balloons" loading="lazy">
+                        <span class="prop-pill"><i class="fa-solid fa-shield-halved"></i> Double-Stuffed</span>
+                    </div>
+                    <div class="prop-body">
+                        <h4>Double-Stuffed Balloons</h4>
+                        <p>Exclusive double-layered balloon crafting ensures 100% opaque, velvety matte colors that stay full for 24 to 48 hours.</p>
+                        <div class="prop-tags">
+                            <span class="prop-tag">Zero Transparency</span>
+                            <span class="prop-tag">Biodegradable Latex</span>
+                            <span class="prop-tag">Shine Spray</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prop-card">
+                    <div class="prop-media">
+                        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=800&auto=format&fit=crop&q=80" alt="Silk & Fresh Floral Accents" loading="lazy">
+                        <span class="prop-pill"><i class="fa-solid fa-fan"></i> Floral Accents</span>
+                    </div>
+                    <div class="prop-body">
+                        <h4>Silk & Fresh Floral Accents</h4>
+                        <p>Hand-tied clusters of faux hydrangeas, garden roses, and silver dollar eucalyptus carefully woven into balloon garlands.</p>
+                        <div class="prop-tags">
+                            <span class="prop-tag">Real Touch</span>
+                            <span class="prop-tag">Non-Allergic</span>
+                            <span class="prop-tag">Fresh Options</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRANSFORMATION SPOTLIGHT -->
+    <section class="spotlight-section">
+        <div class="container">
+            <div class="spotlight-card">
+                <div class="spotlight-media">
+                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&auto=format&fit=crop&q=80" alt="Venue Transformation by Amayra Store" loading="lazy">
+                    <span class="spotlight-badge"><i class="fa-solid fa-clock-rotate-left"></i> 2-Hour Setup Guarantee</span>
+                </div>
+                <div class="spotlight-content">
+                    <div class="tag-label" style="align-self: flex-start;">Turnkey Execution</div>
+                    <h3 class="h2-heading" style="font-size: 2.1rem; margin-top: 8px;">From Empty Space to Fairytale in 120 Minutes</h3>
+                    <p class="body-p">You don't need days of prep. Our expert styling crew arrives on schedule with pre-inflated organic clusters, backdrop frames, and gentle wall-safe attachments.</p>
+                    
+                    <ul class="spotlight-bullets">
+                        <li><i class="fa-solid fa-circle-check"></i> <strong>Zero Wall Damage:</strong> Non-marking clips, free-standing steel rigs, and gentle adhesive methods.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> <strong>Swift On-Time Arrival:</strong> Setup completed minimum 30 minutes before your guests arrive.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> <strong>Turnkey Equipment:</strong> We bring our own ladders, power extensions, and lighting gear.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> <strong>Hassle-Free Dismantling:</strong> Optional post-event pickup and clean breakdown service.</li>
+                    </ul>
+
+                    <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+                        <a href="contact.html" class="btn btn-primary btn-xl">Plan Your Decor Setup <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="packages.html" class="btn btn-outline btn-xl">View Packages Page <i class="fa-solid fa-tag"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -442,11 +575,7 @@
         <div class="container footer-grid">
             <div class="col-main">
                 <div class="brand-brand">
-                    <span class="brand-monogram">A</span>
-                    <div class="brand-names">
-                        <span class="name-main">Amyra's</span>
-                        <span class="name-sub">Party Decor</span>
-                    </div>
+                    <img src="logo.png" alt="Amayra Store Logo" class="brand-main-logo footer-logo">
                 </div>
                 <p class="footer-blurb">
                     Delivering authentic, memorable celebrations with luxury balloon installations and bespoke backdrops across Delhi NCR.
@@ -497,10 +626,34 @@
         <div class="footer-base">
             <div class="container footer-base-inner">
                 <p>&copy; <span id="currentYear"></span> Amyra's Party Decor. All rights reserved.</p>
-                <p>Designed for memorable celebrations with <i class="fa-solid fa-heart" style="color: #E57399;"></i></p>
+                <p>Designed for memorable celebrations with <i class="fa-solid fa-heart" style="color: #E11D48;"></i></p>
             </div>
         </div>
     </footer>
+
+        <!-- MOBILE BOTTOM NAVIGATION (ALWAYS VISIBLE ON PHONE) -->
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="bnav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="services.html" class="bnav-item">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span>Services</span>
+        </a>
+        <a href="packages.html" class="bnav-item">
+            <i class="fa-solid fa-tags"></i>
+            <span>Packages</span>
+        </a>
+        <a href="gallery.html" class="bnav-item">
+            <i class="fa-solid fa-images"></i>
+            <span>Gallery</span>
+        </a>
+        <a href="contact.html" class="bnav-item bnav-book">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Book</span>
+        </a>
+    </nav>
 
     <!-- SCROLL TOP -->
     <button class="luxe-scroll-top" id="scrollTopBtn" aria-label="Scroll to Top">

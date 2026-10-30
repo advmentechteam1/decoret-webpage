@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- BACKDROP OVERLAY FOR MOBILE DRAWER -->
+    <div class="nav-overlay" id="navOverlay"></div>
 
     <!-- TOP ANNOUNCEMENT TICKER -->
     <div class="top-announcement">
@@ -31,34 +33,37 @@
     <header class="luxe-header" id="header">
         <div class="container header-inner">
             <a href="index.html" class="brand-brand">
-                <span class="brand-monogram">A</span>
-                <div class="brand-names">
-                    <span class="name-main">Amyra's</span>
-                    <span class="name-sub">Party Decor</span>
-                </div>
+                <img src="logo.png" alt="Amayra Store Logo" class="brand-main-logo">
             </a>
 
-            <nav class="luxe-nav" id="navMenu">
+                        <nav class="luxe-nav" id="navMenu">
+                <div class="drawer-header">
+                    <div class="brand-brand">
+                        <img src="logo.png" alt="Amayra Store Logo" class="brand-main-logo">
+                    </div>
+                    <button class="drawer-close" id="drawerClose" aria-label="Close Menu">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
                 <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="packages.html">Packages</a></li>
-                    <li><a href="gallery.html" class="active">Gallery</a></li>
-                    <li><a href="reviews.html">Reviews</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-heart"></i> About</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-wand-magic-sparkles"></i> Services</a></li>
+                    <li><a href="packages.html"><i class="fa-solid fa-tags"></i> Packages</a></li>
+                    <li><a href="gallery.html" class="active"><i class="fa-solid fa-images"></i> Gallery</a></li>
+                    <li><a href="reviews.html"><i class="fa-solid fa-star"></i> Reviews</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-calendar-check"></i> Contact</a></li>
                 </ul>
                 <div class="mobile-cta-box">
-                    <a href="contact.html" class="btn btn-primary w-100">Book an Event</a>
+                    <a href="contact.html" class="btn btn-primary w-100"><i class="fa-solid fa-paper-plane"></i> Book an Event</a>
                 </div>
             </nav>
 
             <div class="header-right">
                 <a href="contact.html" class="btn btn-primary d-mobile-none">Book an Event</a>
                 <button class="nav-burger" id="menuToggle" aria-label="Open Navigation Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <i class="fa-solid fa-bars"></i>
+                    <span>Menu</span>
                 </button>
             </div>
         </div>
@@ -215,11 +220,7 @@
         <div class="container footer-grid">
             <div class="col-main">
                 <div class="brand-brand">
-                    <span class="brand-monogram">A</span>
-                    <div class="brand-names">
-                        <span class="name-main">Amyra's</span>
-                        <span class="name-sub">Party Decor</span>
-                    </div>
+                    <img src="logo.png" alt="Amayra Store Logo" class="brand-main-logo footer-logo">
                 </div>
                 <p class="footer-blurb">
                     Delivering authentic, memorable celebrations with luxury balloon installations and bespoke backdrops across Delhi NCR.
@@ -270,10 +271,34 @@
         <div class="footer-base">
             <div class="container footer-base-inner">
                 <p>&copy; <span id="currentYear"></span> Amyra's Party Decor. All rights reserved.</p>
-                <p>Designed for memorable celebrations with <i class="fa-solid fa-heart" style="color: #E57399;"></i></p>
+                <p>Designed for memorable celebrations with <i class="fa-solid fa-heart" style="color: #E11D48;"></i></p>
             </div>
         </div>
     </footer>
+
+        <!-- MOBILE BOTTOM NAVIGATION (ALWAYS VISIBLE ON PHONE) -->
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="bnav-item">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="services.html" class="bnav-item">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span>Services</span>
+        </a>
+        <a href="packages.html" class="bnav-item">
+            <i class="fa-solid fa-tags"></i>
+            <span>Packages</span>
+        </a>
+        <a href="gallery.html" class="bnav-item active">
+            <i class="fa-solid fa-images"></i>
+            <span>Gallery</span>
+        </a>
+        <a href="contact.html" class="bnav-item bnav-book">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Book</span>
+        </a>
+    </nav>
 
     <!-- SCROLL TOP -->
     <button class="luxe-scroll-top" id="scrollTopBtn" aria-label="Scroll to Top">
