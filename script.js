@@ -200,11 +200,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 9. Auto-Fill Package in Contact Form from URL Parameter (e.g. contact.html?package=Blush%20Elegance)
+    // 9. Auto-Fill Package / Setup in Contact Form from URL Parameter (e.g. contact.html?package=Blush%20Elegance or contact.html?setup=Pastel%20Rainbow)
     const packageInput = document.getElementById('preferredPackage');
     if (packageInput) {
         const urlParams = new URLSearchParams(window.location.search);
-        const pkgParam = urlParams.get('package');
+        const pkgParam = urlParams.get('package') || urlParams.get('setup');
         if (pkgParam) {
             packageInput.value = pkgParam;
             packageInput.style.borderColor = '#FF2A85';
@@ -234,144 +234,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 formStatus.innerHTML = `✓ Thank you <strong>${name}</strong>! Your inquiry for <strong>${eventType}</strong> on <strong>${eventDate}</strong> (${packageVal}) has been received successfully. Our team will review and get in touch with your customized theme moodboard soon!`;
                 formStatus.style.display = 'block';
                 bookingForm.reset();
-            }
-        });
-    }
-
-    // 11. SCROLL-REACTIVE FLOATING & SWAYING BALLOON SKY ANIMATION ("Hawa me Laharte Balloons")
-    initFloatingBalloons();
-
-    function initFloatingBalloons() {
-        let container = document.getElementById('balloonAtmosphere');
-        if (!container) {
-            container = document.createElement('div');
-            container.id = 'balloonAtmosphere';
-            container.className = 'balloon-atmosphere';
-            document.body.prepend(container);
-        } else {
-            container.innerHTML = '';
-        }
-
-        const colors = ['orange', 'pink', 'purple', 'cyan'];
-        const isMobile = window.innerWidth <= 768;
-        const totalBalloons = isMobile ? 8 : 14;
-        const balloonInstances = [];
-
-        // Curved silk string SVG template
-        const stringSvg = `
-            <svg class="balloon-string-svg" viewBox="0 0 22 70">
-                <path class="balloon-string-path" d="M11,0 Q3,20 11,35 T11,70" />
-            </svg>
-        `;
-
-        for (let i = 0; i < totalBalloons; i++) {
-            const el = document.createElement('div');
-            const color = colors[i % colors.length];
-            el.className = `balloon-item balloon-color-${color}`;
-
-            // Size variation: crisp & delicate for mobile
-            const size = isMobile 
-                ? (28 + (i % 3) * 6) 
-                : (40 + (i % 4) * 8);
-            const height = Math.round(size * 1.24);
-
-            el.innerHTML = `
-                <div class="balloon-body" style="width: ${size}px; height: ${height}px;"></div>
-                <div class="balloon-knot"></div>
-                ${stringSvg}
-            `;
-
-            container.appendChild(el);
-
-            // Distribution on left & right margins (never blocking center content)
-            let targetXPercent;
-            if (i % 2 === 0) {
-                targetXPercent = isMobile ? (1 + (i * 2.1) % 6) : (2 + (i * 2.5) % 12);
-            } else {
-                targetXPercent = isMobile ? (88 + (i * 2.1) % 7) : (86 + (i * 2.2) % 10);
-            }
-
-            // Stagger initial Y across screen height
-            const winHeight = window.innerHeight || 800;
-            const baseY = (i / totalBalloons) * winHeight * 1.2;
-
-            balloonInstances.push({
-                el: el,
-                xPercent: targetXPercent,
-                baseY: baseY,
-                speedFactor: 0.35 + (i % 4) * 0.15, // Parallax depth factor
-                floatSpeed: 0.03 + (i % 3) * 0.02,  // Ambient upward breeze float
-                swayAmp: isMobile ? (6 + (i % 3) * 4) : (14 + (i % 4) * 6),
-                swaySpeed: 0.0016 + (i % 3) * 0.0007,
-                phase: (i * 1.6),
-                tiltFactor: 0.18 + (i % 3) * 0.06,
-                opacity: isMobile ? (0.82 + (i % 2) * 0.15) : (0.85 + (i % 3) * 0.08)
-            });
-        }
-
-        // Mathematical wrap function (prevents negative modulo freeze)
-        function wrapCoord(val, min, max) {
-            const range = max - min;
-            return ((((val - min) % range) + range) % range) + min;
-        }
-
-        function getScrollTop() {
-            return window.pageYOffset || document.documentElement.scrollTop || window.scrollY || 0;
-        }
-
-        let lastScrollY = getScrollTop();
-        let scrollVelocity = 0;
-        let targetVelocity = 0;
-
-        function updateVelocity() {
-            const currentY = getScrollTop();
-            const delta = currentY - lastScrollY;
-            targetVelocity = delta * 0.6;
-            lastScrollY = currentY;
-        }
-
-        window.addEventListener('scroll', updateVelocity, { passive: true });
-        window.addEventListener('touchmove', updateVelocity, { passive: true });
-        window.addEventListener('wheel', updateVelocity, { passive: true });
-
-        // Continuous silky-smooth 60fps RAF loop
-        function animateBalloons(time) {
-            // Spring damping for responsive inertia
-            scrollVelocity += (targetVelocity - scrollVelocity) * 0.12;
-            targetVelocity *= 0.92;
-
-            const winH = window.innerHeight || 800;
-            const winW = window.innerWidth || 360;
-            const minY = -120;
-            const maxY = winH + 80;
-            const currentScroll = getScrollTop();
-
-            balloonInstances.forEach((b) => {
-                // Vertical motion: Scroll parallax + continuous gentle upward drift ("hawa me lehrate balloons")
-                const naturalFloat = (time * b.floatSpeed);
-                const rawY = b.baseY - (currentScroll * b.speedFactor) - naturalFloat;
-                const computedY = wrapCoord(rawY, minY, maxY);
-
-                // Horizontal sine-wave breeze swaying
-                const swayX = Math.sin(time * b.swaySpeed + b.phase) * b.swayAmp;
-                const windTilt = Math.sin(time * 0.0014 + b.phase) * 6 - (scrollVelocity * b.tiltFactor);
-                const xPx = (b.xPercent / 100) * winW + swayX;
-
-                // Hardware-accelerated 3D transform (zero CSS transition interference)
-                b.el.style.transform = `translate3d(${xPx.toFixed(1)}px, ${computedY.toFixed(1)}px, 0) rotate(${windTilt.toFixed(1)}deg)`;
-                b.el.style.opacity = b.opacity;
-            });
-
-            requestAnimationFrame(animateBalloons);
-        }
-
-        requestAnimationFrame(animateBalloons);
-
-        // Re-calculate on resize / orientation change
-        window.addEventListener('resize', () => {
-            const newIsMobile = window.innerWidth <= 768;
-            if (newIsMobile !== isMobile) {
-                initFloatingBalloons();
             }
         });
     }

@@ -1,61 +1,62 @@
 /* ==========================================================================
-   AMYRA'S PARTY DECOR & STORE - BRAND LOGO SIGNATURE THEME
-   Colors: Sunset Tangerine (#FF7A18), Radiant Neon Pink (#FF2A85),
-           Royal Violet (#7C3AED), Electric Sky Cyan (#00B4D8)
-   Animation: Scroll-Reactive Floating & Swaying Balloons ("Hawa me Laharte Balloons")
+   AMYRA'S LUXURY PARTY DECOR & EVENT DESIGN
+   Harmonious High-End Palette:
+   Velvet Rose (#E11D74), Sunset Coral (#F43F5E), Royal Amethyst (#7C3AED)
+   Ultra-Clean Pearl Canvas (#FCFBFE) & Executive Midnight Slate (#0F172A)
    ========================================================================== */
 
 :root {
-    /* Exact Logo Color Spectrum */
-    --brand-orange: #FF7A18;      /* Sunset Tangerine (Top of Logo) */
-    --brand-pink: #FF2A85;        /* Radiant Neon Pink (Center & "Amyra") */
-    --brand-purple: #7C3AED;      /* Royal Electric Violet ("M/A") */
-    --brand-cyan: #00B4D8;        /* Electric Sky Cyan ("STORE") */
+    /* Harmonious Brand Spectrum */
+    --brand-coral: #F43F5E;       /* Warm Sunset Coral */
+    --brand-pink: #E11D74;        /* Velvet Rose / Magenta */
+    --brand-purple: #7C3AED;      /* Royal Amethyst Violet */
+    --brand-cyan: #0284C7;        /* Coastal Blue Accent */
     --brand-cyan-light: #38BDF8;
 
     /* Core UI Mapping */
-    --primary: #FF2A85;           /* Primary Action: Radiant Hot Pink */
-    --primary-light: #FF5EAA;
-    --primary-soft: #FFF0F6;
-    --primary-dark: #C2185B;
+    --primary: #E11D74;           /* Primary Action: Velvet Rose (Warm, Luxe, Sophisticated) */
+    --primary-light: #F43F85;
+    --primary-soft: #FFF1F6;      /* Delicate luminous blush cream */
+    --primary-dark: #BE185D;
     
-    --rose: #FF2A85;
-    --rose-light: #FF5EAA;
-    --rose-soft: #FFF0F6;
+    --rose: #E11D74;
+    --rose-light: #F43F85;
+    --rose-soft: #FFF1F6;
     
-    --accent: #7C3AED;            /* Secondary Accent: Royal Violet */
-    --accent-glow: rgba(255, 42, 133, 0.3);
+    --accent: #7C3AED;            /* Secondary Accent: Royal Amethyst */
+    --accent-soft: #F5F3FF;
+    --accent-glow: rgba(225, 29, 116, 0.22);
     
-    /* Signature Logo Gradients */
-    --pastel-gradient: linear-gradient(135deg, #FF7A18 0%, #FF2A85 45%, #7C3AED 100%);
-    --pastel-gradient-soft: linear-gradient(135deg, #FFF6F0 0%, #FFF0F6 50%, #F5F2FF 100%);
-    --pastel-gradient-card: linear-gradient(180deg, #FFFFFF 0%, #FAF8FD 100%);
-    --brand-gradient: linear-gradient(135deg, #FF7A18 0%, #FF2A85 35%, #7C3AED 70%, #00B4D8 100%);
-    --brand-gradient-horizontal: linear-gradient(90deg, #FF7A18 0%, #FF2A85 30%, #7C3AED 70%, #00B4D8 100%);
-    --hero-glow: radial-gradient(circle at 50% 30%, rgba(255, 42, 133, 0.12) 0%, rgba(124, 58, 237, 0.08) 40%, rgba(0, 180, 216, 0.06) 70%, transparent 100%);
+    /* Harmonic Luxury Gradients (Smooth 2-3 color blend, zero harsh rainbow clash) */
+    --pastel-gradient: linear-gradient(135deg, #F43F5E 0%, #E11D74 45%, #7C3AED 100%);
+    --pastel-gradient-soft: linear-gradient(135deg, #FFF7F9 0%, #FFF1F6 50%, #F7F5FE 100%);
+    --pastel-gradient-card: linear-gradient(180deg, #FFFFFF 0%, #FAF8FC 100%);
+    --brand-gradient: linear-gradient(135deg, #F43F5E 0%, #E11D74 40%, #7C3AED 100%);
+    --brand-gradient-horizontal: linear-gradient(90deg, #F43F5E 0%, #E11D74 35%, #7C3AED 75%, #0284C7 100%);
+    --hero-glow: radial-gradient(circle at 50% 30%, rgba(225, 29, 116, 0.08) 0%, rgba(124, 58, 237, 0.05) 45%, rgba(2, 132, 199, 0.02) 75%, transparent 100%);
     
-    /* Clean, Elegant Light & Celebratory Theme (No Black Color) */
-    --bg-page: #FAF9FD;           /* Clean luminous celebratory background */
+    /* Clean, Elegant Light & Celebratory Theme */
+    --bg-page: #FCFBFE;           /* Crisp luminous pearl canvas */
     --bg-card: #FFFFFF;           /* Pure white crisp elevated card */
     --bg-card-hover: #FFFFFF;     /* Elevated hover card */
-    --bg-alt: #F4F0FA;            /* Soft warm lavender-cream alternate section */
+    --bg-alt: #F8F7FB;            /* Soft platinum silk section */
     --bg-input: #FFFFFF;          /* Clear white input */
     
     /* High-Contrast Crystal-Clear Typography */
-    --text-heading: #181126;      /* Deep midnight violet - 100% sharp & readable */
-    --text-body: #3E384D;         /* High-contrast rich slate body text */
-    --text-muted: #6B637B;        /* Clearly legible muted text */
-    --border-soft: #EAE4F2;       /* Soft festive border */
-    --border-card: #E4DDEC;
-    --border-focus: #FF2A85;
+    --text-heading: #0F172A;      /* Deep executive midnight slate - 100% sharp & readable */
+    --text-body: #334155;         /* Rich readable slate text */
+    --text-muted: #64748B;        /* Clearly legible muted slate */
+    --border-soft: #ECE8F2;       /* Soft luxury border */
+    --border-card: #E5E1EC;
+    --border-focus: #E11D74;
 
     /* Crisp Festive Glow Shadows */
-    --shadow-sm: 0 4px 18px rgba(124, 58, 237, 0.07);
-    --shadow-md: 0 10px 30px rgba(124, 58, 237, 0.11), 0 2px 8px rgba(255, 42, 133, 0.08);
-    --shadow-lg: 0 18px 45px rgba(124, 58, 237, 0.14), 0 4px 16px rgba(255, 42, 133, 0.12);
-    --shadow-primary: 0 10px 25px rgba(255, 42, 133, 0.35);
-    --shadow-orange: 0 10px 25px rgba(255, 122, 24, 0.35);
-    --shadow-cyan: 0 10px 25px rgba(0, 180, 216, 0.35);
+    --shadow-sm: 0 2px 10px rgba(15, 23, 42, 0.04);
+    --shadow-md: 0 8px 24px -4px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(225, 29, 116, 0.05);
+    --shadow-lg: 0 16px 40px -8px rgba(15, 23, 42, 0.12), 0 4px 12px -2px rgba(225, 29, 116, 0.08);
+    --shadow-primary: 0 8px 22px rgba(225, 29, 116, 0.28);
+    --shadow-orange: 0 8px 22px rgba(244, 63, 94, 0.28);
+    --shadow-cyan: 0 8px 22px rgba(2, 132, 199, 0.25);
     
     --radius-sm: 10px;
     --radius-md: 18px;
@@ -152,7 +153,7 @@ img {
     padding: 6px 18px;
     border-radius: var(--radius-pill);
     margin-bottom: 12px;
-    border: 1px solid rgba(124, 58, 237, 0.25);
+    border: 1px solid var(--border-soft);
 }
 
 .h2-heading {
@@ -204,7 +205,7 @@ img {
 .btn-soft {
     background: var(--primary-soft);
     color: var(--primary);
-    border: 1px solid rgba(124, 58, 237, 0.2);
+    border: 1px solid var(--border-soft);
     font-weight: 700;
 }
 
@@ -408,7 +409,7 @@ img {
     gap: 8px;
     background: var(--primary-soft);
     color: var(--primary);
-    border: 1.5px solid rgba(124, 58, 237, 0.25);
+    border: 1.5px solid var(--border-soft);
     border-radius: var(--radius-pill);
     padding: 8px 16px;
     font-size: 0.92rem;
@@ -479,8 +480,8 @@ img {
 .hero-luxe {
     position: relative;
     padding: 70px 0 85px;
-    background: radial-gradient(circle at 10% 20%, rgba(255, 122, 24, 0.08) 0%, transparent 45%),
-                radial-gradient(circle at 90% 80%, rgba(255, 42, 133, 0.08) 0%, transparent 45%),
+    background: radial-gradient(circle at 10% 20%, rgba(244, 63, 94, 0.05) 0%, transparent 45%),
+                radial-gradient(circle at 90% 80%, rgba(225, 29, 116, 0.05) 0%, transparent 45%),
                 var(--bg-page);
     overflow: hidden;
 }
@@ -492,7 +493,7 @@ img {
     right: -50px;
     width: 320px;
     height: 320px;
-    background: radial-gradient(circle, rgba(255, 42, 133, 0.12) 0%, rgba(255, 122, 24, 0.08) 50%, transparent 70%);
+    background: radial-gradient(circle, rgba(225, 29, 116, 0.07) 0%, rgba(244, 63, 94, 0.04) 50%, transparent 70%);
     pointer-events: none;
     border-radius: 50%;
     filter: blur(40px);
@@ -505,7 +506,7 @@ img {
     left: 8%;
     width: 280px;
     height: 280px;
-    background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, rgba(0, 180, 216, 0.08) 50%, transparent 70%);
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.05) 0%, rgba(2, 132, 199, 0.03) 50%, transparent 70%);
     pointer-events: none;
     border-radius: 50%;
     filter: blur(40px);
@@ -528,7 +529,7 @@ img {
     letter-spacing: 1.5px;
     color: var(--primary);
     background: #FFFFFF;
-    border: 1px solid rgba(124, 58, 237, 0.2);
+    border: 1px solid var(--border-soft);
     padding: 8px 18px;
     border-radius: var(--radius-pill);
     box-shadow: var(--shadow-sm);
@@ -1670,6 +1671,33 @@ img {
     font-size: 1.2rem;
 }
 
+.item-actions {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-gallery-book {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--brand-gradient);
+    color: #FFFFFF !important;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: var(--radius-pill);
+    box-shadow: 0 4px 14px rgba(255, 42, 133, 0.4);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-gallery-book:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(255, 42, 133, 0.6);
+}
+
 .masonry-item:hover .item-overlay {
     opacity: 1;
 }
@@ -2349,123 +2377,21 @@ img {
 }
 
 /* ==========================================================================
-   FLOATING & SWAYING BALLOON SKY ANIMATION ("HAWA ME LAHARTE BALLOONS")
+   LUXURY AMBIENT BACKGROUND GLOW (CLEAN, EDITORIAL, MODERN)
    ========================================================================== */
-.balloon-atmosphere {
+body::before {
+    content: '';
     position: fixed;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 80px);
-    pointer-events: none;
-    z-index: 40;
-    overflow: hidden;
-}
-
-.balloon-item {
-    position: absolute;
     top: 0;
     left: 0;
-    will-change: transform, opacity;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 88% 12%, rgba(225, 29, 116, 0.03) 0%, transparent 45%),
+        radial-gradient(circle at 10% 48%, rgba(124, 58, 237, 0.025) 0%, transparent 40%),
+        radial-gradient(circle at 78% 85%, rgba(2, 132, 199, 0.02) 0%, transparent 45%);
     pointer-events: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* 3D Glossy Balloon Body */
-.balloon-body {
-    position: relative;
-    border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
-    filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.18));
-    box-shadow: inset -6px -6px 14px rgba(0, 0, 0, 0.22),
-                inset 6px 6px 14px rgba(255, 255, 255, 0.4);
-}
-
-/* Main 3D Gloss Reflection */
-.balloon-body::before {
-    content: '';
-    position: absolute;
-    top: 14%;
-    left: 18%;
-    width: 32%;
-    height: 40%;
-    border-radius: 50%;
-    background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.25) 50%, transparent 80%);
-    transform: rotate(-35deg);
-}
-
-/* Secondary Ambient Rim Light */
-.balloon-body::after {
-    content: '';
-    position: absolute;
-    bottom: 12%;
-    right: 22%;
-    width: 18%;
-    height: 18%;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.35);
-    filter: blur(2px);
-}
-
-/* Balloon Bottom Knot */
-.balloon-knot {
-    width: 8px;
-    height: 6px;
-    margin-top: -1px;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    z-index: 2;
-}
-
-/* Curving Silk String */
-.balloon-string-svg {
-    width: 22px;
-    height: 70px;
-    overflow: visible;
-    margin-top: -1px;
-    transform-origin: top center;
-    animation: stringSway 3.6s ease-in-out infinite alternate;
-}
-
-.balloon-string-path {
-    fill: none;
-    stroke: rgba(100, 116, 139, 0.5);
-    stroke-width: 1.5;
-    stroke-dasharray: 4 2;
-}
-
-@keyframes stringSway {
-    0% { transform: rotate(-5deg); }
-    100% { transform: rotate(7deg); }
-}
-
-/* 4 Signature Colors Matching Uploaded Logo */
-.balloon-color-orange .balloon-body {
-    background: radial-gradient(circle at 38% 32%, #FFA84A 0%, #FF7A18 55%, #D45400 100%);
-}
-.balloon-color-orange .balloon-knot {
-    background: #D45400;
-}
-
-.balloon-color-pink .balloon-body {
-    background: radial-gradient(circle at 38% 32%, #FF66AA 0%, #FF2A85 55%, #A8004C 100%);
-}
-.balloon-color-pink .balloon-knot {
-    background: #A8004C;
-}
-
-.balloon-color-purple .balloon-body {
-    background: radial-gradient(circle at 38% 32%, #A78BFA 0%, #7C3AED 55%, #4C1D95 100%);
-}
-.balloon-color-purple .balloon-knot {
-    background: #4C1D95;
-}
-
-.balloon-color-cyan .balloon-body {
-    background: radial-gradient(circle at 38% 32%, #67E8F9 0%, #00B4D8 55%, #0369A1 100%);
-}
-.balloon-color-cyan .balloon-knot {
-    background: #0369A1;
+    z-index: -1;
 }
 
 /* ==========================================================================
@@ -2814,11 +2740,22 @@ img {
 
     .gallery-masonry {
         grid-template-columns: 1fr;
-        grid-auto-rows: 240px;
+        grid-auto-rows: 250px;
     }
 
     .masonry-item.item-tall {
         grid-row: span 1;
+    }
+
+    .item-overlay {
+        opacity: 1;
+        background: linear-gradient(0deg, rgba(20, 15, 30, 0.92) 0%, rgba(20, 15, 30, 0.45) 55%, transparent 85%);
+        padding: 16px;
+    }
+
+    .btn-gallery-book {
+        padding: 6px 14px;
+        font-size: 0.78rem;
     }
 
     .input-grid {
