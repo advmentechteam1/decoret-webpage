@@ -79,7 +79,7 @@ html {
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     color: var(--text-body);
     background-color: var(--bg-page);
     line-height: 1.65;
@@ -88,14 +88,14 @@ body {
 }
 
 h1, h2, h3, h4, .h2-heading {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Fredoka', sans-serif;
     color: var(--text-heading);
     font-weight: 700;
     line-height: 1.25;
 }
 
 h5, h6 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-weight: 700;
 }
 
@@ -179,7 +179,7 @@ img {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-weight: 600;
     font-size: 0.95rem;
     padding: 12px 28px;
@@ -571,7 +571,7 @@ img {
 }
 
 .metric-val {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Fredoka', sans-serif;
     font-size: 2.1rem;
     font-weight: 800;
     background: var(--pastel-gradient);
@@ -715,7 +715,7 @@ img {
 }
 
 .trust-text h4 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 0.98rem;
     font-weight: 700;
     margin-bottom: 4px;
@@ -839,7 +839,7 @@ img {
 
 .badge-num {
     display: block;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Fredoka', sans-serif;
     font-size: 2.8rem;
     font-weight: 800;
     color: var(--primary);
@@ -973,7 +973,7 @@ img {
 }
 
 .box-num {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Fredoka', sans-serif;
     font-size: 1.25rem;
     font-weight: 800;
     color: var(--primary);
@@ -1437,7 +1437,7 @@ img {
 }
 
 .tier-price-box .val {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Fredoka', sans-serif;
     font-size: 3rem;
     font-weight: 800;
     color: var(--text-heading);
@@ -1512,7 +1512,7 @@ img {
 .comparison-table th {
     background: var(--primary-soft);
     color: var(--text-heading);
-    font-family: 'Playfair Display', serif;
+    font-family: 'Fredoka', sans-serif;
     font-size: 1.15rem;
 }
 
@@ -1824,7 +1824,7 @@ img {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-weight: 700;
     font-size: 1.05rem;
     color: var(--text-heading);

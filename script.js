@@ -238,3 +238,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// 11. Scroll-reveal animation (cards fade/slide in as they enter the viewport)
+document.addEventListener('DOMContentLoaded', () => {
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const targets = document.querySelectorAll(
+        '.section-title-wrap, .process-card, .service-box, .theme-card, .prop-card, .tier-card, .review-box, .timeline-card, .prep-item, .addon-card, .faq-item, .spotlight-card, .masonry-item, .perk-card, .trust-box'
+    );
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+    targets.forEach((el, i) => {
+        el.classList.add('js-reveal');
+        el.style.transitionDelay = ((i % 4) * 70) + 'ms';
+        io.observe(el);
+    });
+});
